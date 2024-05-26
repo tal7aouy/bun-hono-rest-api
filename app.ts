@@ -4,7 +4,7 @@ import { prettyJSON } from 'hono/pretty-json'
 import { cors } from 'hono/cors'
 //
 import connectDB from './config/db'
-import { Users } from './routes'
+import { Users,Tasks } from './routes'
 import { errorHandler, notFound } from './middlewares'
 
 // Initialize the Hono app
@@ -30,6 +30,10 @@ app.get('/', (c) => c.text('API is running!'))
 
 // User Routes
 app.route('/users', Users)
+
+// Tasks Routes
+
+app.route('/tasks', Tasks)
 
 // Error Handler
 app.onError((err, c) => {
