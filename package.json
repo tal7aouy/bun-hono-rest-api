@@ -1,0 +1,19 @@
+{
+  "name": "crud",
+  "module": "app.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run app.ts",
+    "dev": "bun --hot run app.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "hono": "^4.3.11",
+    "mongoose": "^8.4.0"
+  }
+}
